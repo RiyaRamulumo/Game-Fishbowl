@@ -44,6 +44,32 @@ public class Movement : MonoBehaviour
             gameObject.transform.localScale = new Vector3((float)0.07972806, (float)0.07972806, (float)0.07972806);
         }
 
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            move.y += 1;
+
+            /* raxis = 30f;
+           while (inAir == true)
+            {
+                raxis = raxis - 1;
+                player.rotation = Quaternion.Euler(0f, 0f, raxis);
+            }*/
+
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            move.x += 1;
+            player.rotation = Quaternion.Euler(0f, 0f, 0f);
+            gameObject.transform.localScale = new Vector3((float)-0.079728061, (float)0.079728061, (float)0.079728061);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            move.x -= 1;
+            player.rotation = Quaternion.Euler(0f, 0f, 0f);
+            gameObject.transform.localScale = new Vector3((float)0.07972806, (float)0.07972806, (float)0.07972806);
+        }
+
+
         transform.position += move.normalized * speed * Time.deltaTime;
         
     }
