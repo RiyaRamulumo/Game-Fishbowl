@@ -4,7 +4,7 @@ public class FishDetectsWater : MonoBehaviour
 {
     void Start()
     {
-        Debug.Log("Script is running");
+        
     }
 
     void Update()
