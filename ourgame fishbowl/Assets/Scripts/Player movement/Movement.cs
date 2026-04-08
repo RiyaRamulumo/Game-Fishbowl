@@ -20,28 +20,42 @@ public class Movement : MonoBehaviour
     {
         playerheight = render.bounds.extents.y; 
     }
+    private bool GetIsGrounded()
+    {
+        bool hit = Physics2D.Raycast(transform.position, Vector2.down, playerheight + 0.1f, LayerMask.GetMask("Ground"));
+      
+        if (hit)
+        {
+            candoublejump = true;
+        }
+
+        return hit;
+    }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 move = Vector3.zero;
-        bool hit = Physics2D.Raycast(transform.position, Vector2.down, 1.5f, LayerMask.GetMask("Ground"));
+         bool hit = Physics2D.Raycast(transform.position, Vector2.down, playerheight + 0.1f, LayerMask.GetMask("Ground"));
         Debug.DrawRay(transform.position, Vector2.down * 3f);
 
-        if (Input.GetKey(KeyCode.W) && GetIsGrounded())
+      
+        bool isGrounded = GetIsGrounded();
+
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            Jump(JumpForce);   
-        }
-        else
-            if (Input.GetKey(KeyCode.W) && !GetIsGrounded() && candoublejump)
+            if (isGrounded)
             {
-                rbPlayer.linearVelocity = Vector2.zero;
-                rbPlayer.angularVelocity = 0;
+                Jump(JumpForce);
+
+            }
+            else if (candoublejump)
+            {
+                rbPlayer.linearVelocity = Vector3.zero;
                 Jump(doubleJumpForce);
                 candoublejump = false;
-
-                
             }
+        }
 
         if (Input.GetKey(KeyCode.Escape))
         {
@@ -100,19 +114,10 @@ public class Movement : MonoBehaviour
     {
         GetIsGrounded();
     }
-    private bool GetIsGrounded()
-    {
-      bool hit = Physics2D.Raycast(transform.position, Vector2.down, playerheight + 0.1f, LayerMask.GetMask("Ground"));
-        if (hit)
-        {
-            candoublejump = true;
-        }
-
-        return hit;
-    }
+   
     private void Jump(float force)
     {
-        rbPlayer.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+        rbPlayer.AddForce(Vector2.up * force, ForceMode2D.Impulse);
     }
 
 
