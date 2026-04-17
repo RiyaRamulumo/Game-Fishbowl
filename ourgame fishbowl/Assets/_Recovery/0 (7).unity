@@ -1772,7 +1772,6 @@ MonoBehaviour:
   maxTime: 10
   timerText: {fileID: 435873331}
   GameOverText: {fileID: 0}
-  dropPrefab: {fileID: 0}
 --- !u!1 &331012774
 GameObject:
   m_ObjectHideFlags: 0
@@ -2844,7 +2843,6 @@ GameObject:
   - component: {fileID: 423094363}
   - component: {fileID: 423094362}
   - component: {fileID: 423094361}
-  - component: {fileID: 423094364}
   m_Layer: 0
   m_Name: Frame with instructions_0
   m_TagString: Untagged
@@ -2948,22 +2946,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1057762729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &423094364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423094360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 313c1b64e665dab43aa43dedece7111e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::swing
-  speed: 2
-  angle: 15
-  swingTime: 5
-  stopTime: 5
 --- !u!1 &428169341
 GameObject:
   m_ObjectHideFlags: 0
@@ -6176,7 +6158,6 @@ GameObject:
   - component: {fileID: 1057762729}
   - component: {fileID: 1057762731}
   - component: {fileID: 1057762730}
-  - component: {fileID: 1057762732}
   m_Layer: 0
   m_Name: Frame with instructions_0
   m_TagString: Untagged
@@ -6281,22 +6262,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1057762732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057762728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 313c1b64e665dab43aa43dedece7111e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::swing
-  speed: 2
-  angle: 15
-  swingTime: 5
-  stopTime: 5
 --- !u!1 &1060203641
 GameObject:
   m_ObjectHideFlags: 0
@@ -7527,7 +7492,7 @@ GameObject:
   - component: {fileID: 1385088993}
   m_Layer: 0
   m_Name: mouse trap_0 (3)
-  m_TagString: Trap
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7689,8 +7654,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98.1, y: 130.63}
-  m_SizeDelta: {x: 111.72, y: 70.45}
+  m_AnchoredPosition: {x: -98.9, y: 130.63}
+  m_SizeDelta: {x: 113.32, y: 70.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1421468688
 MonoBehaviour:
@@ -8671,7 +8636,7 @@ GameObject:
   - component: {fileID: 1632941971}
   m_Layer: 0
   m_Name: mouse trap_0
-  m_TagString: Trap
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
