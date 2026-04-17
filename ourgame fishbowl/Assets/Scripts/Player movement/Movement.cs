@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -6,40 +7,67 @@ public class Movement : MonoBehaviour
     public float speed = 10f;
     public Transform player;
     public Rigidbody2D rbPlayer;
-    public SpriteRenderer render;
-    public float playerheight;
-    public float JumpForce;
-    public float doubleJumpForce;
+    private SpriteRenderer render;
+    private float playerheight;
+    public float JumpForce = 3f;
+    public float doubleJumpForce = 2f;
     private bool candoublejump;
+    public GameObject canvas;
+    public GameObject escapemenu;
+
+    public TextMeshProUGUI gameboardtext;
 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        render = GetComponent<SpriteRenderer>();
         playerheight = render.bounds.extents.y; 
+    }
+    private bool GetIsGrounded()
+    {
+        bool hit = Physics2D.Raycast(transform.position, Vector2.down, playerheight + 0.1f, LayerMask.GetMask("Ground"));
+      
+        if (hit)
+        {
+            candoublejump = true;
+        }
+
+        return hit;
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 move = Vector3.zero;
-        bool hit = Physics2D.Raycast(transform.position, Vector2.down, 1.5f, LayerMask.GetMask("Ground"));
+         bool hit = Physics2D.Raycast(transform.position, Vector2.down, playerheight + 0.1f, LayerMask.GetMask("Ground"));
         Debug.DrawRay(transform.position, Vector2.down * 3f);
 
-        if (Input.GetKey(KeyCode.W) && GetIsGrounded())
+      
+        bool isGrounded = GetIsGrounded();
+
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            Jump(JumpForce);   
-        }
-        else
-            if (Input.GetKey(KeyCode.W) && !GetIsGrounded() && candoublejump)
+            if (isGrounded)
             {
-                rbPlayer.linearVelocity = Vector2.zero;
-                rbPlayer.angularVelocity = 0;
+                Jump(JumpForce);
+
+            }
+            else if (candoublejump)
+            {
+                rbPlayer.linearVelocity = Vector3.zero;
                 Jump(doubleJumpForce);
                 candoublejump = false;
             }
+        }
 
-
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            canvas.SetActive(true);
+            escapemenu.SetActive(true);
+            GetComponent<Movement>().enabled = false;
+            gameboardtext.text = "Game Paused";
+        }
 
         if (Input.GetKey(KeyCode.D) )
         {
@@ -54,23 +82,7 @@ public class Movement : MonoBehaviour
             gameObject.transform.localScale = new Vector3((float)0.07972806, (float)0.07972806, (float)0.07972806);
         }
 
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            move.y += 1;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            move.x += 1;
-            player.rotation = Quaternion.Euler(0f, 0f, 0f);
-            gameObject.transform.localScale = new Vector3((float)-0.079728061, (float)0.079728061, (float)0.079728061);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            move.x -= 1;
-            player.rotation = Quaternion.Euler(0f, 0f, 0f);
-            gameObject.transform.localScale = new Vector3((float)0.07972806, (float)0.07972806, (float)0.07972806);
-        }
-
+    
 
         transform.position += move.normalized * speed * Time.deltaTime;
 
@@ -91,19 +103,10 @@ public class Movement : MonoBehaviour
     {
         GetIsGrounded();
     }
-    private bool GetIsGrounded()
-    {
-      bool hit = Physics2D.Raycast(transform.position, Vector2.down, playerheight + 0.1f, LayerMask.GetMask("Ground"));
-        if (hit)
-        {
-            candoublejump = true;
-        }
-
-        return hit;
-    }
+   
     private void Jump(float force)
     {
-        rbPlayer.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+        rbPlayer.AddForce(Vector2.up * force, ForceMode2D.Impulse);
     }
 
 
