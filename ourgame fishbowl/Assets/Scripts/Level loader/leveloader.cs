@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using JetBrains.Annotations;
 using UnityEditorInternal;
+using UnityEditor;
 
 public class leveloader : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class leveloader : MonoBehaviour
     public Slider slider;
     public TextMeshProUGUI progresstext;
     public Animator animator;
+    
     public float transitiontime = 2f;
     public bool ToPlay = false;
 
@@ -34,6 +36,7 @@ public class leveloader : MonoBehaviour
       
 
         yield return new WaitForSeconds(transitiontime);
+      
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
         loadingscreen.SetActive(true);
@@ -45,6 +48,10 @@ public class leveloader : MonoBehaviour
             slider.value = progress;
             progresstext.text = progress * 100f + "%";
             
+            if (progress == 100)
+            {
+                animator.SetTrigger("Done playing");
+            }
 
             yield return null;
         }
