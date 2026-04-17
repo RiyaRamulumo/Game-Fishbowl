@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -6,18 +7,21 @@ public class Movement : MonoBehaviour
     public float speed = 10f;
     public Transform player;
     public Rigidbody2D rbPlayer;
-    public SpriteRenderer render;
-    public float playerheight;
+    private SpriteRenderer render;
+    private float playerheight;
     public float JumpForce = 3f;
     public float doubleJumpForce = 2f;
     private bool candoublejump;
+    public GameObject canvas;
     public GameObject escapemenu;
-    public GameObject interactobject;
+
+    public TextMeshProUGUI gameboardtext;
 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        render = GetComponent<SpriteRenderer>();
         playerheight = render.bounds.extents.y; 
     }
     private bool GetIsGrounded()
@@ -59,9 +63,10 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Escape))
         {
+            canvas.SetActive(true);
             escapemenu.SetActive(true);
             GetComponent<Movement>().enabled = false;
-            interactobject.SetActive(false);
+            gameboardtext.text = "Game Paused";
         }
 
         if (Input.GetKey(KeyCode.D) )
@@ -77,23 +82,7 @@ public class Movement : MonoBehaviour
             gameObject.transform.localScale = new Vector3((float)0.07972806, (float)0.07972806, (float)0.07972806);
         }
 
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            move.y += 1;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            move.x += 1;
-            player.rotation = Quaternion.Euler(0f, 0f, 0f);
-            gameObject.transform.localScale = new Vector3((float)-0.079728061, (float)0.079728061, (float)0.079728061);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            move.x -= 1;
-            player.rotation = Quaternion.Euler(0f, 0f, 0f);
-            gameObject.transform.localScale = new Vector3((float)0.07972806, (float)0.07972806, (float)0.07972806);
-        }
-
+    
 
         transform.position += move.normalized * speed * Time.deltaTime;
 

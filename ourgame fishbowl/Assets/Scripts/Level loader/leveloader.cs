@@ -2,29 +2,49 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEditor.Build.Content;
+using UnityEngine.UI;
+using TMPro;
+using JetBrains.Annotations;
+using UnityEditorInternal;
 
 public class leveloader : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public GameObject loadingscreen;
+    public Slider slider;
+    public TextMeshProUGUI progresstext;
+    public Animator animator;
+    public float transitiontime = 2f;
+    public bool ToPlay = false;
 
-    // Update is called once per frame
+   
+    public void Triggeranimation()
+    {
+        animator.SetTrigger("play");
+    }
+  
     public void LoadLevel (int sceneIndex) 
     {
-        StartCoroutine(LoadAsynchronously(sceneIndex));
         
+       StartCoroutine(LoadAsynchronously(sceneIndex));
+       
     }
 
     IEnumerator LoadAsynchronously (int sceneIndex)
     {
+      
+
+        yield return new WaitForSeconds(transitiontime);
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        loadingscreen.SetActive(true);
 
         while (operation.isDone == false)
         {
-            Debug.Log(operation.progress);
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+
+            slider.value = progress;
+            progresstext.text = progress * 100f + "%";
+            
 
             yield return null;
         }

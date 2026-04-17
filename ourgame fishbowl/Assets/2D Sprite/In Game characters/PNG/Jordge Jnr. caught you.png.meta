@@ -1,0 +1,390 @@
+fileFormatVersion: 2
+guid: 1d9415197918f3344933a7f17c9bda49
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4829471592748508146
+    second: Jordge Jnr. caught you_0
+  - first:
+      213: -3057241703107258849
+    second: Jordge Jnr. caught you_1
+  - first:
+      213: 3493168683304344264
+    second: Jordge Jnr. caught you_2
+  - first:
+      213: 7855613713354565817
+    second: Jordge Jnr. caught you_3
+  - first:
+      213: 6091719033926162697
+    second: Jordge Jnr. caught you_4
+  - first:
+      213: -4951930652813410933
+    second: Jordge Jnr. caught you_5
+  - first:
+      213: 709878629018715785
+    second: Jordge Jnr. caught you_6
+  - first:
+      213: 300483072375160762
+    second: Jordge Jnr. caught you_7
+  - first:
+      213: 8714706267144429635
+    second: Jordge Jnr. caught you_8
+  - first:
+      213: -7891776900976418335
+    second: Jordge Jnr. caught you_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jordge Jnr. caught you_0
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 64
+        width: 2168
+        height: 2893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c926d8c254afcb0800000000000000
+      internalID: -4829471592748508146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jordge Jnr. caught you_1
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 2744
+        width: 62
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1618c57ede7295d0800000000000000
+      internalID: -3057241703107258849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jordge Jnr. caught you_2
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 2768
+        width: 57
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cadfdce86a3a7030800000000000000
+      internalID: 3493168683304344264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jordge Jnr. caught you_3
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 2741
+        width: 49
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b8af2d2d0fb40d60800000000000000
+      internalID: 7855613713354565817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jordge Jnr. caught you_4
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 2742
+        width: 55
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90997a0af222a8450800000000000000
+      internalID: 6091719033926162697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jordge Jnr. caught you_5
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 2687
+        width: 187
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8d30b6ce45374bb0800000000000000
+      internalID: -4951930652813410933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jordge Jnr. caught you_6
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 161
+        width: 1953
+        height: 2558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9864d4c1adef9d900800000000000000
+      internalID: 709878629018715785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jordge Jnr. caught you_7
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 2500
+        width: 394
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf70f523c78b2400800000000000000
+      internalID: 300483072375160762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jordge Jnr. caught you_8
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 2565
+        width: 202
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 340a30f6d2bd0f870800000000000000
+      internalID: 8714706267144429635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jordge Jnr. caught you_9
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 2405
+        width: 415
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1eaa298b6ca7290800000000000000
+      internalID: -7891776900976418335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4b6be5b7279feda45b1cd44b966191e6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Jordge Jnr. caught you_0: -4829471592748508146
+      Jordge Jnr. caught you_1: -3057241703107258849
+      Jordge Jnr. caught you_2: 3493168683304344264
+      Jordge Jnr. caught you_3: 7855613713354565817
+      Jordge Jnr. caught you_4: 6091719033926162697
+      Jordge Jnr. caught you_5: -4951930652813410933
+      Jordge Jnr. caught you_6: 709878629018715785
+      Jordge Jnr. caught you_7: 300483072375160762
+      Jordge Jnr. caught you_8: 8714706267144429635
+      Jordge Jnr. caught you_9: -7891776900976418335
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
