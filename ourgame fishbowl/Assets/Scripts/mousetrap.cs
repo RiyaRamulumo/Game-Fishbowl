@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class YouLost : MonoBehaviour
+public class mousetrap : MonoBehaviour
 {
     public GameObject youlost;
     public GameObject disapear;
@@ -9,18 +9,18 @@ public class YouLost : MonoBehaviour
     public GameObject pausemenu;
     public Movement movement;
     public TextMeshProUGUI howlost;
-   
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            youlost.SetActive(true) ;
-            pausemenu.SetActive(true) ;
-            howlost.text = "You woke up Jordge Snr";
-            
-            disapear.SetActive(false) ;
-            exitbutton.SetActive(false) ;
-            movement.enabled = false ;
+            youlost.SetActive(true);
+            pausemenu.SetActive(true);
+            howlost.text = "You got caught in a mouse trap";
+
+            disapear.SetActive(false);
+            exitbutton.SetActive(false);
+            movement.enabled = false;
         }
     }
 }

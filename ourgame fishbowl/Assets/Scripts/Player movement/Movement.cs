@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     private bool candoublejump;
     public GameObject canvas;
     public GameObject escapemenu;
-
+    public GameObject HideInteractable;
     public TextMeshProUGUI gameboardtext;
 
     
@@ -69,6 +69,7 @@ public class Movement : MonoBehaviour
             escapemenu.SetActive(true);
             GetComponent<Movement>().enabled = false;
             gameboardtext.text = "Game Paused";
+            HideInteractable.SetActive(false);
         }
 
         if (Input.GetKey(KeyCode.D) )
