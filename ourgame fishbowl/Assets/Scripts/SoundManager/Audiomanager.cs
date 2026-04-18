@@ -23,6 +23,7 @@ public class Audiomanager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+
         }
     }
     //public AudioClip soundeffects;
