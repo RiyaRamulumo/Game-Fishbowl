@@ -85,7 +85,38 @@ public class Movement : MonoBehaviour
             gameObject.transform.localScale = new Vector3((float)0.07972806, (float)0.07972806, (float)0.07972806);
         }
 
-    
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (isGrounded)
+            {
+                Jump(JumpForce);
+
+            }
+            else if (candoublejump)
+            {
+                rbPlayer.linearVelocity = Vector3.zero;
+                Jump(doubleJumpForce);
+                candoublejump = false;
+            }
+
+
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            move.x += 1;
+            player.rotation = Quaternion.Euler(0f, 0f, 0f);
+            gameObject.transform.localScale = new Vector3((float)-0.079728061, (float)0.079728061, (float)0.079728061);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            move.x -= 1;
+            player.rotation = Quaternion.Euler(0f, 0f, 0f);
+            gameObject.transform.localScale = new Vector3((float)0.07972806, (float)0.07972806, (float)0.07972806);
+        }
+
+
+
 
         transform.position += move.normalized * speed * Time.deltaTime;
 

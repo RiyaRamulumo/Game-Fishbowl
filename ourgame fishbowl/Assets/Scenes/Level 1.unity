@@ -805,7 +805,6 @@ GameObject:
   m_Component:
   - component: {fileID: 122217656}
   - component: {fileID: 122217658}
-  - component: {fileID: 122217657}
   m_Layer: 0
   m_Name: Orange_0
   m_TagString: Untagged
@@ -828,28 +827,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 670494034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &122217657
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 122217655}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a0525a70e5ceef84c9e512d63ee4d0b2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &122217658
 SpriteRenderer:
   serializedVersion: 2
@@ -897,7 +874,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 4
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4121880872312635667, guid: 6df1b093018fc9a40b572834eac15041, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -940,7 +917,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1367875199}
   - {fileID: 226065866}
   - {fileID: 1685646945}
   - {fileID: 1590574760}
@@ -948,6 +924,7 @@ RectTransform:
   - {fileID: 337534569}
   - {fileID: 18552252}
   - {fileID: 2026062770}
+  - {fileID: 1367875199}
   m_Father: {fileID: 237459981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1322,7 +1299,7 @@ Transform:
   m_GameObject: {fileID: 196653647}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1979837, y: -0.019609988, z: -18.1}
+  m_LocalPosition: {x: -1.1983376, y: -0.110520035, z: -18.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2698,7 +2675,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 4
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4121880872312635667, guid: 6df1b093018fc9a40b572834eac15041, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3405,7 +3382,7 @@ MonoBehaviour:
   animator: {fileID: 346950725}
   JordgeJnr: {fileID: 1454339354}
   Jordge: {fileID: -4829471592748508146, guid: 1d9415197918f3344933a7f17c9bda49, type: 3}
-  speedopen: 20
+  speedopen: 5
   youlost: {fileID: 1688453295}
   disapear: {fileID: 1377738164}
   exitbutton: {fileID: 226065865}
@@ -4754,7 +4731,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 428535539}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 18552251}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 18552254}
+        m_TargetAssemblyTypeName: leveloader, Assembly-CSharp
+        m_MethodName: Triggeranimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 18552254}
+        m_TargetAssemblyTypeName: leveloader, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &428535539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5792,7 +5805,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 6
+  m_SortingOrder: 30
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.92549026, g: 0.9490197, b: 0.9803922, a: 1}
@@ -5883,7 +5896,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 11
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3159591529253418473, guid: 85e31efbd2370b941ac80a185477ad69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6261,9 +6274,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639110741}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4111.6807}
-  m_LocalScale: {x: 382.97507, y: 95.28529, z: 220.9514}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4111.6797}
+  m_LocalScale: {x: 382.975, y: 95.28528, z: 220.95137}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 589788072}
@@ -6322,7 +6335,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 5
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.28930807, g: 0.28930807, b: 0.28930807, a: 1}
@@ -6873,7 +6886,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7841750413799554831, guid: cd475409079f231469b6152d344d8deb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7588,7 +7601,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7841750413799554831, guid: cd475409079f231469b6152d344d8deb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10297,7 +10310,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7841750413799554831, guid: cd475409079f231469b6152d344d8deb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12025,18 +12038,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 18552254}
-        m_TargetAssemblyTypeName: leveloader, Assembly-CSharp
-        m_MethodName: LoadLevel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 18552251}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -12053,6 +12054,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: leveloader, Assembly-CSharp
         m_MethodName: Triggeranimation
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 18552254}
+        m_TargetAssemblyTypeName: leveloader, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12806,7 +12819,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.7137255}
@@ -14125,18 +14138,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 319517106}
-        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 148767190}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -14149,7 +14150,55 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 319517106}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1685646944}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1688453295}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2026062769}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1377738164}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -14499,9 +14548,9 @@ RectTransform:
   m_LocalScale: {x: 1.6008391, y: 1.7007813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 639110742}
   - {fileID: 233886265}
   - {fileID: 1461761405}
+  - {fileID: 639110742}
   m_Father: {fileID: 148767191}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -15017,7 +15066,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 3
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -15313,8 +15362,8 @@ Transform:
   m_GameObject: {fileID: 1722102682}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.45, y: -3.62178, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 70.45, y: -3.68, z: 0}
+  m_LocalScale: {x: 1, y: 1.025, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -15863,7 +15912,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 5
+  m_SortingOrder: 80
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3052594192866008071, guid: f7a41b72b7ae9ca4e9734eb3dfc49caa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -17171,7 +17220,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1985155306}
   - component: {fileID: 1985155308}
-  - component: {fileID: 1985155307}
   m_Layer: 0
   m_Name: Orange_0
   m_TagString: Untagged
@@ -17194,28 +17242,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1054019798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1985155307
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985155305}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a0525a70e5ceef84c9e512d63ee4d0b2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &1985155308
 SpriteRenderer:
   serializedVersion: 2
@@ -17263,7 +17289,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 4
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4121880872312635667, guid: 6df1b093018fc9a40b572834eac15041, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -17839,7 +17865,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1060271961
   m_SortingLayer: 1
-  m_SortingOrder: 11
+  m_SortingOrder: 30
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1088438791279652508, guid: 99bb7894aa60f074fa1672d6fcd2bece, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

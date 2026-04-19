@@ -61,7 +61,7 @@ public class SlidingDoor : MonoBehaviour
                 disapear.SetActive(false);
                 exitbutton.SetActive(false);
                 movement.enabled = false;
-                Time.timeScale = 0f;
+                Time.timeScale = 1f;
             }
         }
     }
