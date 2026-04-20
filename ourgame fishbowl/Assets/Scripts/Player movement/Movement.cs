@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 using TMPro;
-using UnityEditor;
+
 using UnityEngine;
 
 public class Movement : MonoBehaviour

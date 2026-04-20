@@ -1,12 +1,9 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
-using UnityEditor.Build.Content;
+using UnityEngine.SceneManagement;             
 using UnityEngine.UI;
 using TMPro;
-using JetBrains.Annotations;
-using UnityEditorInternal;
-using UnityEditor;
+
 
 public class leveloader : MonoBehaviour
 {

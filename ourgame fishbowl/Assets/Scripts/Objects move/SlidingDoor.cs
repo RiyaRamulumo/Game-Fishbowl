@@ -53,7 +53,7 @@ public class SlidingDoor : MonoBehaviour
             float upDown = Input.GetAxis("Vertical");
             float sideways = Input.GetAxis("Horizontal");
 
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
             {
                 youlost.SetActive(true);
                 pausemenu.SetActive(true);
