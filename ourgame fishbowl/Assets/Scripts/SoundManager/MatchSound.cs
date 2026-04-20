@@ -4,19 +4,24 @@ using UnityEngine.UI;
 public class MatchSound : MonoBehaviour
 {
     public Slider forsound;
-    public Slider tomatch;
-    [SerializeField] AudioSource source; 
+    private float volumeforsound;
+
+    [SerializeField] AudioSource source;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        volumeforsound = 1f;
     }
+    
+    
 
     // Update is called once per frame
     void Update()
     {
-      tomatch.value = forsound.value;  
-      source.volume = tomatch.value;
-     
+        if (forsound != null)
+        {
+            volumeforsound = forsound.value;
+        }
+        source.volume = volumeforsound;
     }
 }

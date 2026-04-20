@@ -1475,11 +1475,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: a9fc582a4c03aef4f9ce3b1b5b37dc5c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1882,7 +1882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Audiomanager
   audioSource: {fileID: 464609248}
   slider: {fileID: 1179000652}
-  background: {fileID: 8300000, guid: b7b17384d70f73447b753baf297461ef, type: 3}
+  background: {fileID: 8300000, guid: a9fc582a4c03aef4f9ce3b1b5b37dc5c, type: 3}
 --- !u!114 &601033893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2221,7 +2221,6 @@ MonoBehaviour:
   progresstext: {fileID: 445015978}
   animator: {fileID: 638285328}
   transitiontime: 10
-  ToPlay: 0
 --- !u!4 &638285327
 Transform:
   m_ObjectHideFlags: 0
@@ -4414,7 +4413,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MatchSound
   forsound: {fileID: 1275357903}
-  tomatch: {fileID: 1179000652}
   source: {fileID: 464609248}
 --- !u!114 &1179000652
 MonoBehaviour:

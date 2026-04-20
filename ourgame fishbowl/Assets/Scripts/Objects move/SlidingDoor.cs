@@ -20,6 +20,7 @@ public class SlidingDoor : MonoBehaviour
     public GameObject pausemenu;
     public Movement movement;
     public TextMeshProUGUI howlost;
+    public Watermeter watermeter;
     private void Start()
     {
         animator.SetTrigger("Play");
@@ -62,6 +63,7 @@ public class SlidingDoor : MonoBehaviour
                 exitbutton.SetActive(false);
                 movement.enabled = false;
                 Time.timeScale = 1f;
+                watermeter.enabled = false;
             }
         }
     }

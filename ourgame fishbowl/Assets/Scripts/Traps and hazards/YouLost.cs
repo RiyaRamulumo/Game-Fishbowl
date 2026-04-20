@@ -9,7 +9,8 @@ public class YouLost : MonoBehaviour
     public GameObject pausemenu;
     public Movement movement;
     public TextMeshProUGUI howlost;
-    
+    public Watermeter watermeter;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -20,6 +21,7 @@ public class YouLost : MonoBehaviour
             
             exitbutton.SetActive(false) ;
             movement.enabled = false ;
+            watermeter.enabled = false ;
         }
     }
 }

@@ -16,7 +16,7 @@ public class leveloader : MonoBehaviour
     public Animator animator;
     
     public float transitiontime = 2f;
-    public bool ToPlay = false;
+    
 
    
     public void Triggeranimation()

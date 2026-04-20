@@ -12,6 +12,7 @@ public class JordgeJnr : MonoBehaviour
     public Sprite Jordgecaughtyou;
     public TextMeshProUGUI howlost;
     public SpriteRenderer Jordge;
+    public Watermeter watermeter;
     public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
@@ -23,6 +24,8 @@ public class JordgeJnr : MonoBehaviour
             disapear.SetActive(false);
             exitbutton.SetActive(false);
             movement.enabled = false;
+
+            watermeter.enabled = false;
         } 
     }
 }
