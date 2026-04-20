@@ -9,7 +9,7 @@ public class YouLost : MonoBehaviour
     public GameObject pausemenu;
     public Movement movement;
     public TextMeshProUGUI howlost;
-   
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -18,7 +18,6 @@ public class YouLost : MonoBehaviour
             pausemenu.SetActive(true) ;
             howlost.text = "You woke up Jordge Snr";
             
-            disapear.SetActive(false) ;
             exitbutton.SetActive(false) ;
             movement.enabled = false ;
         }

@@ -1,5 +1,6 @@
 using System.Runtime.CompilerServices;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -16,13 +17,17 @@ public class Movement : MonoBehaviour
     public GameObject escapemenu;
     public GameObject HideInteractable;
     public TextMeshProUGUI gameboardtext;
+    public Watermeter watermeter;
+    private bool pause;
+  
 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         render = GetComponent<SpriteRenderer>();
-        playerheight = render.bounds.extents.y; 
+        playerheight = render.bounds.extents.y;
+       
     }
     private bool GetIsGrounded()
     {
@@ -68,6 +73,14 @@ public class Movement : MonoBehaviour
             canvas.SetActive(true);
             escapemenu.SetActive(true);
             GetComponent<Movement>().enabled = false;
+            if (pause)
+            {
+                UnpauseGame();
+            }
+            else
+            {
+                PauseGame();
+            }
             gameboardtext.text = "Game Paused";
             HideInteractable.SetActive(false);
         }
@@ -131,6 +144,18 @@ public class Movement : MonoBehaviour
 
      } */  
 
+    }
+    public void PauseGame()
+    {
+        pause = true;
+        watermeter.PauseTime();
+        Time.timeScale = 0f;
+    }
+    public void UnpauseGame()
+    {
+        pause = false;
+        watermeter.UnPause();
+        Time.timeScale = 1f;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

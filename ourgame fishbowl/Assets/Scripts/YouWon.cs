@@ -8,7 +8,7 @@ public class YouWon : MonoBehaviour
     public GameObject exitbutton;
     public GameObject pausemenu;
     public Movement movement;
- 
+    public Watermeter watermeter;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,6 +21,7 @@ public class YouWon : MonoBehaviour
             disapear.SetActive(false);
             exitbutton.SetActive(false);
             movement.enabled = false;
+            watermeter.enabled = false;
         }
     }
 }
