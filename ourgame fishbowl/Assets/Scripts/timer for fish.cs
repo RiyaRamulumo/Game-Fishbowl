@@ -49,7 +49,8 @@ void Update()
 
 void OnTriggerEnter2D(Collider2D other)
 {
-    if (other.CompareTag("Water"))
+        Debug.Log("Touched: " + other.tag);
+        if (other.CompareTag("Water"))
     {
         inWater = true;
     }
@@ -93,6 +94,7 @@ void OnTriggerExit2D(Collider2D other)
     void Die()
 
     {
+        if (isDead) return; // this will prevent multiple calls in my code
         isDead = true;
 
         Debug.Log("Fish Died!");
@@ -121,8 +123,6 @@ void OnTriggerExit2D(Collider2D other)
         //  Wait before disappearing
         Invoke("HideFish", 1.5f);
     }
-    void HideFish()
-    {
-        gameObject.SetActive(false);
-    }
+    
 }
+
