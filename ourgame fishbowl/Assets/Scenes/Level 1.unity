@@ -17061,13 +17061,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Reach the toilet to escape the house
+  m_text: 'Reach the toilet to escape the house.
 
-    Avoid:
 
-    
+    Obstacles:
 
-    *Detection
+    *Avoid Detection
     from any person
 
     *Do not let your Water Meter get to zero
