@@ -15,6 +15,8 @@ public class Datamanager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+       
     }
 
     public void setVolume(float volume)
