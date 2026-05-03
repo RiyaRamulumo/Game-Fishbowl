@@ -4,15 +4,23 @@ using UnityEngine.UI;
 public class Audiomanager : MonoBehaviour
 {
     public static Audiomanager instance;
-    
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] Slider slider;
+     public static bool SFXOn = true;
 
+    public AudioSource audioSource;
+    public AudioSource SFXSound;
+    public Slider slider;
+    public AudioClip death;
+    public AudioClip jump;
+    public AudioClip won;
+    public AudioClip hitbubble;
+    public AudioClip hitthefloor;    
+    public AudioClip background;
 
-    //[SerializeField] AudioSource SFX;
+   
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    public AudioClip background;
+
 
     private void Awake()
     {
@@ -27,6 +35,8 @@ public class Audiomanager : MonoBehaviour
             Destroy(gameObject);
 
         }
+
+        SFXOn = PlayerPrefs.GetInt("SFX", 1) == 1;
     }
     //public AudioClip soundeffects;
     void Start()
@@ -65,6 +75,14 @@ public class Audiomanager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("musicVolume", slider.value);
     }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        if (!SFXOn) return;
+       SFXSound.PlayOneShot(clip);
+    }
+
+   
 
    
 

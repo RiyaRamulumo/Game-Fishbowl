@@ -3,6 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class Movement : MonoBehaviour
 {
     public float speed = 10f;
@@ -20,6 +21,8 @@ public class Movement : MonoBehaviour
     public TextMeshProUGUI gameboardtext;
     public Watermeter watermeter;
     private bool pause;
+
+    Audiomanager audiomanager;
   
 
     
@@ -29,6 +32,11 @@ public class Movement : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
         playerheight = render.bounds.extents.y;
        
+    }
+
+    private void Awake()
+    {
+        audiomanager = GameObject.FindWithTag("Audio").GetComponent<Audiomanager>();
     }
     private bool GetIsGrounded()
     {
@@ -57,9 +65,9 @@ public class Movement : MonoBehaviour
             if (isGrounded)
             {
                 Jump(JumpForce);
-                
+                Audiomanager.instance.PlaySFX(Audiomanager.instance.jump);
                     doit();
-              
+               
 
             }
             else if (candoublejump)
@@ -67,10 +75,9 @@ public class Movement : MonoBehaviour
                 rbPlayer.linearVelocity = Vector3.zero;
                 Jump(doubleJumpForce);
                 candoublejump = false;
+                
 
-                
-                  doit();
-                
+                doit();             
                
             }
 
@@ -115,7 +122,7 @@ public class Movement : MonoBehaviour
             if (isGrounded)
             {
                 Jump(JumpForce);
-          
+ 
                 doit();
 
             }
@@ -124,10 +131,10 @@ public class Movement : MonoBehaviour
                 rbPlayer.linearVelocity = Vector3.zero;
                 Jump(doubleJumpForce);
                 candoublejump = false;
+              
 
 
-               
-                    doit();
+                doit();
                 
             }
 
@@ -186,6 +193,11 @@ public class Movement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GetIsGrounded();
+
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+
+        }
     }
    
     private void Jump(float force)
@@ -194,6 +206,6 @@ public class Movement : MonoBehaviour
     }
 
 
-   
+
 
 }
