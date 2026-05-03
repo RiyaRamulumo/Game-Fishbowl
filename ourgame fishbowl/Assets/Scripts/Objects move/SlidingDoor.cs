@@ -1,12 +1,14 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SlidingDoor : MonoBehaviour
 {
     [SerializeField] Animator animator;
     public SpriteRenderer JordgeJnr;
     public Sprite Jordge;
+
    
 
     public float speedopen = 2f;
