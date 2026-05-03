@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: e793c07a64f9bc84e8e1cc8fa0cb6f73
+guid: 8fda4059d42ab854ab502d704da6b512
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2046744107788710464
-    second: vase with stand_0
-  - first:
-      213: -1270738127524356940
-    second: vase with stand_1
+      213: 7687642868736986319
+    second: wall background_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,89 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vase with stand_0
+      name: wall background_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 22
-        width: 211
-        height: 267
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0cd412df3118893e0800000000000000
-      internalID: -2046744107788710464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vase with stand_1
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 243
-        width: 13
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4bc9d5ad76e6d5ee0800000000000000
-      internalID: -1270738127524356940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vase with stand_2
-      rect:
-        serializedVersion: 2
-        x: 245
-        y: 167
-        width: 20
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a626b03934f924246969a48344976ada
-      internalID: 929564347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vase with stand_3
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 13
-        width: 256
-        height: 279
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df3b387f987e77542906b4d25d11b01c
-      internalID: -2022546225
+      spriteID: fcc022f457effaa60800000000000000
+      internalID: 7687642868736986319
       vertices: []
       indices: 
       edges: []
@@ -207,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: aad1f601706a4fe4d935e33ee97cee4f
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -217,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      vase with stand_0: -2046744107788710464
-      vase with stand_1: -1270738127524356940
-      vase with stand_2: 929564347
-      vase with stand_3: -2022546225
+      wall background_0: 7687642868736986319
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
