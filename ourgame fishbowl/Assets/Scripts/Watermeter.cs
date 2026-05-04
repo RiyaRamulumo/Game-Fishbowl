@@ -70,6 +70,12 @@ public class Watermeter : MonoBehaviour
     {
         pause = false;
     }
+
+    public void FullRefill()
+    {
+        currentTime = sliderTime;
+        slider.value = currentTime; 
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Water"))

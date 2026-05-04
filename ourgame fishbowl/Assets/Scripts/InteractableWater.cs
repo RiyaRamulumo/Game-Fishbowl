@@ -65,7 +65,7 @@ public class InteractableWater : MonoBehaviour
     {
         mesh = new Mesh();
 
-        vertices = new Vector3[NumOfVertices = NUM_OF_Y_VERTICES];
+        vertices = new Vector3[NumOfVertices * NUM_OF_Y_VERTICES];
         topverticesIndex = new int[NumOfVertices];
         for (int y = 0; y < NUM_OF_Y_VERTICES; y++)
         {
@@ -88,7 +88,7 @@ public class InteractableWater : MonoBehaviour
         int[] triangles = new int[(NumOfVertices - 1) * (NUM_OF_Y_VERTICES - 1) * 6];
         int index = 0;
 
-        for (int y = 0; y <= NUM_OF_Y_VERTICES - 1; ++y)
+        for (int y = 0; y < NUM_OF_Y_VERTICES - 1; ++y)
         {
             for (int x = 0; x < NumOfVertices - 1; x++)
             {
@@ -192,10 +192,10 @@ public  class InteractableWaterEditor : Editor
         Vector2 snap = Vector3.one * 0.1f;
 
         Vector3[] corners = new Vector3[4];
-        corners[0] = center + new Vector3(water.width / 2, water.height / 2, 0);
-        corners[1] = center + new Vector3(water.width / 2, water.height / 2, 0);
-        corners[2] = center + new Vector3(water.width / 2, water.height / 2, 0);
-        corners[3] = center + new Vector3(water.width / 2, water.height / 2, 0);
+        corners[0] = center + new Vector3(-water.width / 2, -water.height / 2, 0);
+        corners[1] = center + new Vector3(water.width / 2, -water.height / 2, 0);  
+        corners[2] = center + new Vector3(-water.width / 2, water.height / 2, 0);  
+        corners[3] = center + new Vector3(water.width / 2, water.height / 2, 0);   
 
         EditorGUI.BeginChangeCheck();
         Vector3 newBottomLeft = Handles.FreeMoveHandle(corners[0], handleSize, snap, Handles.CubeHandleCap);
