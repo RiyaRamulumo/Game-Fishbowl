@@ -4,6 +4,7 @@ using TMPro;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class Watermeter : MonoBehaviour
@@ -14,7 +15,8 @@ public class Watermeter : MonoBehaviour
     public bool inwater = false;
     public bool pause;
     private bool dead;
-
+    private int seconds;
+    public TextMeshProUGUI timer;
     public GameObject youlost;
     public GameObject disapear;
     public GameObject exitbutton;
@@ -22,8 +24,15 @@ public class Watermeter : MonoBehaviour
     public Movement movement;
     public TextMeshProUGUI howlost;
     public Watermeter watermeter;
+   public Light2D light2D;
+    public Image waterguy;
+    public Sprite happy;
+ 
+    public Sprite Worried;
+    public Sprite Scared;
 
-
+    float Intensity;
+    public float changelight = 2f;
     private void Start()
     {
         currentTime = sliderTime;
@@ -59,7 +68,29 @@ public class Watermeter : MonoBehaviour
             movement.enabled = false;
             watermeter.enabled = false;
         }
+        seconds = Mathf.CeilToInt(currentTime);
+        timer.text = "00:" + seconds.ToString("00");
 
+        if (seconds > 4 && seconds < 7)
+        {
+            waterguy.sprite = happy;
+            timer.color = Color.white;
+            Intensity = 1f;
+        }
+        if (seconds > 2 && seconds <= 4)
+        {
+            waterguy.sprite = Worried;
+            timer.color = Color.red;
+            Intensity = 0.6f;
+        }
+        if (seconds > 0 && seconds <= 2)
+        {
+            waterguy.sprite = Scared;
+            timer.color = Color.darkRed;
+            Intensity = 0.2f;
+        }
+
+        light2D.intensity = Mathf.Lerp(light2D.intensity, Intensity, Time.deltaTime * changelight);
         
     }
     public void PauseTime()
