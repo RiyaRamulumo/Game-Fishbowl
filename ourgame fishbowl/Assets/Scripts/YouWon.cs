@@ -14,10 +14,11 @@ public class YouWon : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Audiomanager.instance.PlaySFX(Audiomanager.instance.won);
             youwon.SetActive(true);
             pausemenu.SetActive(true);
-            
 
+         
             disapear.SetActive(false);
             exitbutton.SetActive(false);
             movement.enabled = false;

@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,7 @@ public class toggleswitch : MonoBehaviour
     private bool bswitch;
     public Sprite on;
     public Sprite off;
-
+    public TextMeshProUGUI status;
     public Toggle sfxtoggle;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,7 +21,7 @@ public class toggleswitch : MonoBehaviour
 
        Audiomanager.SFXOn = sfxOn;
         checkmark.sprite = sfxOn ? on : off;
-
+        status.text = sfxOn ? "ON" : "OFF";
         sfxtoggle.onValueChanged.AddListener(OnToggleChanged);
      
     }
@@ -31,6 +32,8 @@ public class toggleswitch : MonoBehaviour
         PlayerPrefs.SetInt("SFX", isOn ? 1 : 0);
 
         checkmark.sprite = isOn ? on : off;
+
+        status.text = isOn ? "ON" : "OFF";
     }
   
    

@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 public class SlidingDoor : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class SlidingDoor : MonoBehaviour
     public GameObject exitbutton;
     public GameObject pausemenu;
     public Movement movement;
+    public Light2D light2D;
     public TextMeshProUGUI howlost;
     public Watermeter watermeter;
     private void Start()
@@ -66,6 +68,7 @@ public class SlidingDoor : MonoBehaviour
                 movement.enabled = false;
                 Time.timeScale = 1f;
                 watermeter.enabled = false;
+                Audiomanager.instance.PlaySFX(Audiomanager.instance.death);
             }
         }
     }
