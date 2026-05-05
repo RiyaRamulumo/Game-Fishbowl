@@ -21,12 +21,13 @@ public class mousetrap : MonoBehaviour
             light2D.intensity = 1;
             youlost.SetActive(true);
             pausemenu.SetActive(true);
-            howlost.text = "You got caught in a mouse trap";
-            Audiomanager.instance.PlaySFX(Audiomanager.instance.death);
             disapear.SetActive(false);
             exitbutton.SetActive(false);
             movement.enabled = false;
             watermeter.enabled = false;
+            howlost.text = "You got caught in a mouse trap";
+            Audiomanager.instance.PlaySFX(Audiomanager.instance.death);
+            
         }
     }
 }
