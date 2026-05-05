@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
 {
-    public GameObject tutorialPanel;   // The panel with buttons
+    public GameObject tutorialPanel;
 
-    public float timeToShow = 30f;     // Time before showing panel
+    public float timeToShow = 30f;
     private float timer = 0f;
     private bool hasShown = false;
 
@@ -17,24 +17,22 @@ public class TutorialManager : MonoBehaviour
 
         if (timer >= timeToShow)
         {
-            ShowOptions();
+            ShowTutorialMenu();
         }
     }
 
-    void ShowOptions()
+    // 🧻 SHOW MENU (used by timer + toilet)
+    public void ShowTutorialMenu()
     {
         hasShown = true;
 
         if (tutorialPanel != null)
-        {
             tutorialPanel.SetActive(true);
-        }
 
-        // Pause the game
         Time.timeScale = 0f;
     }
 
-    // BUTTON FUNCTIONS
+    // BUTTONS
 
     public void ContinueTutorial()
     {
