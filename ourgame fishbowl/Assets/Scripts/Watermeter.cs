@@ -27,7 +27,10 @@ public class Watermeter : MonoBehaviour
    public Light2D light2D;
     public Image waterguy;
     public Sprite happy;
+    public Animator waterripple;
+    public GameObject twaterripple;
    
+    
     public Sprite Worried;
     public Sprite Scared;
 
@@ -113,7 +116,11 @@ public class Watermeter : MonoBehaviour
         {
             inwater = true;
             Audiomanager.instance.PlaySFX(Audiomanager.instance.splash);
-            
+          
+        }
+        if (other.gameObject.layer == LayerMask.NameToLayer("Bucket 1"))
+        {
+            twaterripple.transform.position = new Vector3(8.256f, -2.9495f, 0);
         }
         
     }
@@ -125,7 +132,7 @@ public class Watermeter : MonoBehaviour
             inwater = false;
         }
     }
-   
+  
 
     /*
     public void StartTimer()
