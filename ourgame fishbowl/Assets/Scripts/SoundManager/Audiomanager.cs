@@ -16,7 +16,7 @@ public class Audiomanager : MonoBehaviour
     public AudioClip hitbubble;
     public AudioClip hitthefloor;
     public AudioClip background;
-
+    public AudioClip splash;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

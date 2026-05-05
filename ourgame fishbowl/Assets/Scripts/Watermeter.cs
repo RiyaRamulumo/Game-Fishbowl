@@ -27,7 +27,7 @@ public class Watermeter : MonoBehaviour
    public Light2D light2D;
     public Image waterguy;
     public Sprite happy;
- 
+   
     public Sprite Worried;
     public Sprite Scared;
 
@@ -112,6 +112,8 @@ public class Watermeter : MonoBehaviour
         if (other.CompareTag("Water"))
         {
             inwater = true;
+            Audiomanager.instance.PlaySFX(Audiomanager.instance.splash);
+            
         }
         
     }
@@ -123,6 +125,7 @@ public class Watermeter : MonoBehaviour
             inwater = false;
         }
     }
+   
 
     /*
     public void StartTimer()

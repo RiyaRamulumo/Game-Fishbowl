@@ -21,7 +21,8 @@ public class Movement : MonoBehaviour
     public TextMeshProUGUI gameboardtext;
     public Watermeter watermeter;
     private bool pause;
-
+    [SerializeField] private Animator jumpeffect;
+   
     Audiomanager audiomanager;
   
 
@@ -49,7 +50,7 @@ public class Movement : MonoBehaviour
 
         return hit;
     }
-
+ 
     // Update is called once per frame
     void Update()
     {
@@ -72,11 +73,12 @@ public class Movement : MonoBehaviour
             }
             else if (candoublejump)
             {
+                jumpeffect.SetTrigger("Jump");
                 rbPlayer.linearVelocity = Vector3.zero;
                 Jump(doubleJumpForce);
                 candoublejump = false;
+                Audiomanager.instance.PlaySFX(Audiomanager.instance.jump);
                 
-
                 doit();             
                
             }
@@ -122,7 +124,7 @@ public class Movement : MonoBehaviour
             if (isGrounded)
             {
                 Jump(JumpForce);
- 
+                Audiomanager.instance.PlaySFX(Audiomanager.instance.jump);
                 doit();
 
             }
@@ -131,9 +133,9 @@ public class Movement : MonoBehaviour
                 rbPlayer.linearVelocity = Vector3.zero;
                 Jump(doubleJumpForce);
                 candoublejump = false;
-              
 
 
+                Audiomanager.instance.PlaySFX(Audiomanager.instance.jump);
                 doit();
                 
             }
@@ -194,7 +196,7 @@ public class Movement : MonoBehaviour
     {
         GetIsGrounded();
 
-        if (collision.gameObject.CompareTag("Floor"))
+        if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("Water"))
         {
 
         }
