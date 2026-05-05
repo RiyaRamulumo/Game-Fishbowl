@@ -9,6 +9,8 @@ TagManager:
   - Water
   - Audio
   - Shelf
+  - Person
+  - Toilet
   layers:
   - Default
   - TransparentFX
