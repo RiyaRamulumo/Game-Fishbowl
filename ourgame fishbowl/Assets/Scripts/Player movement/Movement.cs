@@ -1,7 +1,8 @@
 using System.Runtime.CompilerServices;
 using TMPro;
-
+using Unity.VisualScripting;
 using UnityEngine;
+
 
 public class Movement : MonoBehaviour
 {
@@ -16,9 +17,12 @@ public class Movement : MonoBehaviour
     public GameObject canvas;
     public GameObject escapemenu;
     public GameObject HideInteractable;
+    public ParticleSystem trail;
     public TextMeshProUGUI gameboardtext;
     public Watermeter watermeter;
     private bool pause;
+
+    Audiomanager audiomanager;
   
 
     
@@ -28,6 +32,11 @@ public class Movement : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
         playerheight = render.bounds.extents.y;
        
+    }
+
+    private void Awake()
+    {
+        audiomanager = GameObject.FindWithTag("Audio").GetComponent<Audiomanager>();
     }
     private bool GetIsGrounded()
     {
@@ -56,6 +65,9 @@ public class Movement : MonoBehaviour
             if (isGrounded)
             {
                 Jump(JumpForce);
+                Audiomanager.instance.PlaySFX(Audiomanager.instance.jump);
+                    doit();
+               
 
             }
             else if (candoublejump)
@@ -63,6 +75,10 @@ public class Movement : MonoBehaviour
                 rbPlayer.linearVelocity = Vector3.zero;
                 Jump(doubleJumpForce);
                 candoublejump = false;
+                
+
+                doit();             
+               
             }
 
        
@@ -90,12 +106,15 @@ public class Movement : MonoBehaviour
             move.x += 1;
             player.rotation = Quaternion.Euler(0f, 0f, 0f);
             gameObject.transform.localScale = new Vector3((float)-0.079728061, (float)0.079728061, (float)0.079728061);
+            doit();
+            
         }
         if (Input.GetKey(KeyCode.A) )
         {
             move.x -= 1;
             player.rotation = Quaternion.Euler(0f, 0f, 0f);
             gameObject.transform.localScale = new Vector3((float)0.07972806, (float)0.07972806, (float)0.07972806);
+            doit();
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -103,6 +122,8 @@ public class Movement : MonoBehaviour
             if (isGrounded)
             {
                 Jump(JumpForce);
+ 
+                doit();
 
             }
             else if (candoublejump)
@@ -110,6 +131,11 @@ public class Movement : MonoBehaviour
                 rbPlayer.linearVelocity = Vector3.zero;
                 Jump(doubleJumpForce);
                 candoublejump = false;
+              
+
+
+                doit();
+                
             }
 
 
@@ -120,12 +146,14 @@ public class Movement : MonoBehaviour
             move.x += 1;
             player.rotation = Quaternion.Euler(0f, 0f, 0f);
             gameObject.transform.localScale = new Vector3((float)-0.079728061, (float)0.079728061, (float)0.079728061);
+            doit();
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             move.x -= 1;
             player.rotation = Quaternion.Euler(0f, 0f, 0f);
             gameObject.transform.localScale = new Vector3((float)0.07972806, (float)0.07972806, (float)0.07972806);
+            doit();
         }
 
 
@@ -145,6 +173,10 @@ public class Movement : MonoBehaviour
      } */  
 
     }
+    private void doit()
+    {
+        trail.Play();
+    }
     public void PauseGame()
     {
         pause = true;
@@ -161,6 +193,11 @@ public class Movement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GetIsGrounded();
+
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+
+        }
     }
    
     private void Jump(float force)
@@ -169,6 +206,6 @@ public class Movement : MonoBehaviour
     }
 
 
-   
+
 
 }

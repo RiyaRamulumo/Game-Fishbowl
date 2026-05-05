@@ -1,18 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Audiomanager : MonoBehaviour
 {
     public static Audiomanager instance;
-    
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] Slider slider;
+    public static bool SFXOn = true;
+
+    public AudioSource audioSource;
+    public AudioSource SFXSound;
+    public Slider slider;
+    public AudioClip death;
+    public AudioClip jump;
+    public AudioClip won;
+    public AudioClip hitbubble;
+    public AudioClip hitthefloor;
+    public AudioClip background;
 
 
-    //[SerializeField] AudioSource SFX;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    public AudioClip background;
+
 
     private void Awake()
     {
@@ -27,6 +36,8 @@ public class Audiomanager : MonoBehaviour
             Destroy(gameObject);
 
         }
+
+        SFXOn = PlayerPrefs.GetInt("SFX", 1) == 1;
     }
     //public AudioClip soundeffects;
     void Start()
@@ -39,15 +50,14 @@ public class Audiomanager : MonoBehaviour
         if (PlayerPrefs.HasKey("musicVolume"))
         {
             PlayerPrefs.SetFloat("musicVolume", 1);
-            load();
+
 
         }
-        else
-        {
-            load();
 
-            AudioListener.volume = slider.value;
-        }
+        load();
+
+        AudioListener.volume = slider.value;
+
     }
 
     public void ChangeVolume()
@@ -58,7 +68,7 @@ public class Audiomanager : MonoBehaviour
 
     private void load()
     {
-       slider.value = PlayerPrefs.GetFloat("musicVolume");
+        slider.value = PlayerPrefs.GetFloat("musicVolume");
     }
 
     private void save()
@@ -66,6 +76,12 @@ public class Audiomanager : MonoBehaviour
         PlayerPrefs.SetFloat("musicVolume", slider.value);
     }
 
-   
+    public void PlaySFX(AudioClip clip)
+    {
+        if (!SFXOn) return;
+        SFXSound.PlayOneShot(clip);
+    }
+
+
 
 }

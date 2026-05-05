@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: 08a4ef63314eaef4481f780490158459
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 787452828895124115
+    second: Facial expressions_0
+  - first:
+      213: -6696961420698005541
+    second: Facial expressions_1
+  - first:
+      213: 3170517972301134914
+    second: Facial expressions_2
+  - first:
+      213: 4317315388381597400
+    second: Facial expressions_3
+  - first:
+      213: 5635353105671191100
+    second: Facial expressions_4
+  - first:
+      213: -2057674514672608808
+    second: Facial expressions_5
+  - first:
+      213: 7350023085797677281
+    second: Facial expressions_6
+  - first:
+      213: -2801988348324960341
+    second: Facial expressions_7
+  - first:
+      213: 1522758719808459128
+    second: Facial expressions_8
+  - first:
+      213: 1496189214092406407
+    second: Facial expressions_9
+  - first:
+      213: 3626652294650582410
+    second: Facial expressions_10
+  - first:
+      213: 6185548888216511823
+    second: Facial expressions_11
+  - first:
+      213: -5883682890293307772
+    second: Facial expressions_12
+  - first:
+      213: -620628770667978000
+    second: Facial expressions_13
+  - first:
+      213: 8434685841748483688
+    second: Facial expressions_14
+  - first:
+      213: 1993166073787884317
+    second: Facial expressions_15
+  - first:
+      213: -4163036867490740450
+    second: Facial expressions_16
+  - first:
+      213: 4255359356694347385
+    second: Facial expressions_17
+  - first:
+      213: 6524140952214631389
+    second: Facial expressions_18
+  - first:
+      213: -617905904638952551
+    second: Facial expressions_19
+  - first:
+      213: 1857661862850606660
+    second: Facial expressions_20
+  - first:
+      213: 8740563561238461185
+    second: Facial expressions_21
+  - first:
+      213: 6333912032693266772
+    second: Facial expressions_22
+  - first:
+      213: 6046636309024193175
+    second: Facial expressions_23
+  - first:
+      213: 3238305063213957710
+    second: Facial expressions_24
+  - first:
+      213: -1709011616346476803
+    second: Facial expressions_25
+  - first:
+      213: 2769786565809737031
+    second: Facial expressions_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Facial expressions_0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 968
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a9baffc289dea00800000000000000
+      internalID: 787452828895124115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 967
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdfccc4e11d9f03a0800000000000000
+      internalID: -6696961420698005541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_2
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 964
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c30053c41fffb20800000000000000
+      internalID: 3170517972301134914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_3
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 963
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de00dbb87f2aeb30800000000000000
+      internalID: 4317315388381597400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_4
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 930
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3afc6fcacbc43e40800000000000000
+      internalID: 5635353105671191100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_5
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 932
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d990915eeba173e0800000000000000
+      internalID: -2057674514672608808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_6
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 923
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e814efed07800660800000000000000
+      internalID: 7350023085797677281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_7
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 923
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7ae4951765d19d0800000000000000
+      internalID: -2801988348324960341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_8
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 921
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 871dfccdcfce12510800000000000000
+      internalID: 1522758719808459128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_9
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 920
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78eafbeb92883c410800000000000000
+      internalID: 1496189214092406407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_10
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 889
+        width: 49
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85d0821c05745230800000000000000
+      internalID: 3626652294650582410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_11
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 916
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4525fef0fb77d550800000000000000
+      internalID: 6185548888216511823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_12
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 916
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48616099595f85ea0800000000000000
+      internalID: -5883682890293307772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_13
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 896
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2a2fadb651367f0800000000000000
+      internalID: -620628770667978000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_14
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 818
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86e5f6d85160e0570800000000000000
+      internalID: 8434685841748483688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_15
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 820
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d13ac7edbf529ab10800000000000000
+      internalID: 1993166073787884317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 776
+        width: 101
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e170c56960ce936c0800000000000000
+      internalID: -4163036867490740450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_17
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 804
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97eb66ff9c21e0b30800000000000000
+      internalID: 4255359356694347385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_18
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 808
+        width: 38
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd3f45131a76a8a50800000000000000
+      internalID: 6524140952214631389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_19
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 768
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99bf0618ad1cc67f0800000000000000
+      internalID: -617905904638952551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_20
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 774
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44630083f9db7c910800000000000000
+      internalID: 1857661862850606660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_21
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 772
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b775cdf38bc4970800000000000000
+      internalID: 8740563561238461185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_22
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 760
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459214b6f6396e750800000000000000
+      internalID: 6333912032693266772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_23
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 769
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79abd55cfa7f9e350800000000000000
+      internalID: 6046636309024193175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_24
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 741
+        width: 55
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4287373c45c0fc20800000000000000
+      internalID: 3238305063213957710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_25
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 764
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfee6aa5dfe5848e0800000000000000
+      internalID: -1709011616346476803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Facial expressions_26
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 740
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d0db6e432407620800000000000000
+      internalID: 2769786565809737031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Facial expressions_0: 787452828895124115
+      Facial expressions_1: -6696961420698005541
+      Facial expressions_10: 3626652294650582410
+      Facial expressions_11: 6185548888216511823
+      Facial expressions_12: -5883682890293307772
+      Facial expressions_13: -620628770667978000
+      Facial expressions_14: 8434685841748483688
+      Facial expressions_15: 1993166073787884317
+      Facial expressions_16: -4163036867490740450
+      Facial expressions_17: 4255359356694347385
+      Facial expressions_18: 6524140952214631389
+      Facial expressions_19: -617905904638952551
+      Facial expressions_2: 3170517972301134914
+      Facial expressions_20: 1857661862850606660
+      Facial expressions_21: 8740563561238461185
+      Facial expressions_22: 6333912032693266772
+      Facial expressions_23: 6046636309024193175
+      Facial expressions_24: 3238305063213957710
+      Facial expressions_25: -1709011616346476803
+      Facial expressions_26: 2769786565809737031
+      Facial expressions_3: 4317315388381597400
+      Facial expressions_4: 5635353105671191100
+      Facial expressions_5: -2057674514672608808
+      Facial expressions_6: 7350023085797677281
+      Facial expressions_7: -2801988348324960341
+      Facial expressions_8: 1522758719808459128
+      Facial expressions_9: 1496189214092406407
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

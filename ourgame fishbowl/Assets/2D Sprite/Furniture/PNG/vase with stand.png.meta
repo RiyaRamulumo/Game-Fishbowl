@@ -122,9 +122,9 @@ TextureImporter:
         x: 18
         y: 22
         width: 211
-        height: 254
+        height: 267
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -146,7 +146,7 @@ TextureImporter:
         width: 13
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,11 +159,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: vase with stand_2
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 167
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a626b03934f924246969a48344976ada
+      internalID: 929564347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vase with stand_3
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 13
+        width: 256
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3b387f987e77542906b4d25d11b01c
+      internalID: -2022546225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: aad1f601706a4fe4d935e33ee97cee4f
     internalID: 0
     vertices: []
     indices: 
@@ -175,6 +219,8 @@ TextureImporter:
     nameFileIdTable:
       vase with stand_0: -2046744107788710464
       vase with stand_1: -1270738127524356940
+      vase with stand_2: 929564347
+      vase with stand_3: -2022546225
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
