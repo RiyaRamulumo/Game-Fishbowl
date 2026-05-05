@@ -3,8 +3,8 @@
 public class FishMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed = 5f;
-    public float jumpForce = 8f;
+    public float moveSpeed = 7f;
+    public float jumpForce = 10f;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -13,11 +13,14 @@ public class FishMovement : MonoBehaviour
     private bool canMove = false;
     private bool hasJumped = false;
     private bool inWater = false;
+    private bool shelfTutorialShown = false;
 
     [Header("UI")]
     public GameObject moveText;
     public GameObject jumpText;
     public GameObject waterText;
+    public GameObject shelfText;
+    public GameObject AvoidPersonText;
 
     void Start()
     {
@@ -26,10 +29,12 @@ public class FishMovement : MonoBehaviour
         // Stop falling at start
         rb.gravityScale = 0f;
 
-        // Make sure only move text is active
+        // Initial UI
         if (moveText != null) moveText.SetActive(true);
         if (jumpText != null) jumpText.SetActive(false);
         if (waterText != null) waterText.SetActive(false);
+        if (shelfText != null) shelfText.SetActive(false);
+        if (AvoidPersonText != null) AvoidPersonText.SetActive(false);
     }
 
     void Update()
@@ -40,15 +45,11 @@ public class FishMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 canMove = true;
-
-                // Enable gravity
                 rb.gravityScale = 2f;
 
-                // Switch UI
                 if (moveText != null) moveText.SetActive(false);
                 if (jumpText != null) jumpText.SetActive(true);
             }
-
             return;
         }
 
@@ -56,12 +57,11 @@ public class FishMovement : MonoBehaviour
         float moveInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
-        // JUMP (GROUND OR WATER)
+        // JUMP
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (inWater)
             {
-                // Softer jump in water
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 1.0f);
             }
             else if (isGrounded)
@@ -97,16 +97,39 @@ public class FishMovement : MonoBehaviour
         }
     }
 
-    // WATER DETECTION
+    // TRIGGERS (Water, Shelf, Person)
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Water"))
+        // WATER
+        if (other.CompareTag("Water") && !shelfTutorialShown)
         {
             inWater = true;
+            shelfTutorialShown = true;
 
-            // Hide water tutorial when player reaches water
             if (waterText != null)
                 waterText.SetActive(false);
+
+            if (shelfText != null)
+                shelfText.SetActive(true);
+
+            if (AvoidPersonText != null)
+                AvoidPersonText.SetActive(true);
+        }
+
+        // SHELF
+        if (other.CompareTag("Shelf"))
+        {
+            if (shelfText != null)
+                shelfText.SetActive(false);
+
+            if (AvoidPersonText != null)
+                AvoidPersonText.SetActive(false);
+        }
+
+        // PERSON = DIE
+        if (other.CompareTag("Person"))
+        {
+            Die();
         }
     }
 
@@ -116,5 +139,17 @@ public class FishMovement : MonoBehaviour
         {
             inWater = false;
         }
+    }
+
+    // DEATH FUNCTION
+    void Die()
+    {
+        Debug.Log("Fish died!");
+
+        rb.linearVelocity = Vector2.zero;
+        rb.simulated = false;
+        canMove = false;
+
+        gameObject.SetActive(false);
     }
 }
