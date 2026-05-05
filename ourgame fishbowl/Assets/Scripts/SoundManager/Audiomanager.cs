@@ -12,6 +12,7 @@ public class Audiomanager : MonoBehaviour
     public Slider slider;
     public AudioClip death;
     public AudioClip jump;
+    public AudioClip click;
     public AudioClip won;
     public AudioClip hitbubble;
     public AudioClip hitthefloor;
@@ -80,6 +81,10 @@ public class Audiomanager : MonoBehaviour
     {
         if (!SFXOn) return;
         SFXSound.PlayOneShot(clip);
+    }
+    public void Onclick()
+    {
+        SFXSound.PlayOneShot(click);
     }
 
 

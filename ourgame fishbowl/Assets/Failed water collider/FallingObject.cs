@@ -5,14 +5,14 @@ using UnityEngine;
 public class FallingObject : MonoBehaviour
 {
     private Vector2 movementDirection;
-    public Rigidbody2D rigidbody2D;
+    public Rigidbody2D rrigidbody2D;
     [SerializeField]
     private float forceAmount;
     private float timeElapsed;
     private bool isMoving = false;
     void Start()
     {
-        rigidbody2D.linearVelocity = Vector3.down * forceAmount;
+        rrigidbody2D.linearVelocity = Vector3.down * forceAmount;
     }
 
     void Update()
@@ -31,7 +31,7 @@ public class FallingObject : MonoBehaviour
         }
         if (isMoving)
         {
-            rigidbody2D.linearVelocity = movementDirection * forceAmount;
+            rrigidbody2D.linearVelocity = movementDirection * forceAmount;
         }
     }
 }
