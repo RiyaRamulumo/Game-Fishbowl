@@ -22,15 +22,14 @@ public class FishMovement : MonoBehaviour
     public GameObject shelfText;
     public GameObject AvoidPersonText;
 
-    [Header("Manager Reference")]
-    public TutorialManager tutorialManager;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
+        // Stop falling at start
         rb.gravityScale = 0f;
 
+        // Initial UI
         if (moveText != null) moveText.SetActive(true);
         if (jumpText != null) jumpText.SetActive(false);
         if (waterText != null) waterText.SetActive(false);
@@ -40,7 +39,7 @@ public class FishMovement : MonoBehaviour
 
     void Update()
     {
-        // WAIT FOR START INPUT
+        // STEP 1: WAIT FOR MOVE INPUT
         if (!canMove)
         {
             if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -63,13 +62,14 @@ public class FishMovement : MonoBehaviour
         {
             if (inWater)
             {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 1.0f);
             }
             else if (isGrounded)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             }
 
+            // First jump → switch tutorial
             if (!hasJumped)
             {
                 hasJumped = true;
@@ -84,16 +84,20 @@ public class FishMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
+        {
             isGrounded = true;
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
+        {
             isGrounded = false;
+        }
     }
 
-    // TRIGGERS
+    // TRIGGERS (Water, Shelf, Person)
     void OnTriggerEnter2D(Collider2D other)
     {
         // WATER
@@ -102,16 +106,24 @@ public class FishMovement : MonoBehaviour
             inWater = true;
             shelfTutorialShown = true;
 
-            if (waterText != null) waterText.SetActive(false);
-            if (shelfText != null) shelfText.SetActive(true);
-            if (AvoidPersonText != null) AvoidPersonText.SetActive(true);
+            if (waterText != null)
+                waterText.SetActive(false);
+
+            if (shelfText != null)
+                shelfText.SetActive(true);
+
+            if (AvoidPersonText != null)
+                AvoidPersonText.SetActive(true);
         }
 
         // SHELF
         if (other.CompareTag("Shelf"))
         {
-            if (shelfText != null) shelfText.SetActive(false);
-            if (AvoidPersonText != null) AvoidPersonText.SetActive(false);
+            if (shelfText != null)
+                shelfText.SetActive(false);
+
+            if (AvoidPersonText != null)
+                AvoidPersonText.SetActive(false);
         }
 
         // PERSON = DIE
@@ -119,23 +131,17 @@ public class FishMovement : MonoBehaviour
         {
             Die();
         }
-
-        // 🧻 TOILET → SHOW MENU
-        if (other.CompareTag("Toilet"))
-        {
-            if (tutorialManager != null)
-            {
-                tutorialManager.ShowTutorialMenu();
-            }
-        }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Water"))
+        {
             inWater = false;
+        }
     }
 
+    // DEATH FUNCTION
     void Die()
     {
         Debug.Log("Fish died!");
