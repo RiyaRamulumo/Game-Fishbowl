@@ -2,6 +2,7 @@ using System.Collections;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -18,31 +19,34 @@ public class YouLost : MonoBehaviour
     public GameObject JordgeSnr;
     public GameObject JordgeSnrCaught;
 
-    private async Task OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-          
-            
-             
+
+
+            JordgeSnr.SetActive(false);
+            JordgeSnrCaught.SetActive(true);
+            movement.enabled = false;
+            watermeter.enabled = false;
+
+
+            Audiomanager.instance.PlaySFX(Audiomanager.instance.death);
+            StartCoroutine(WaitAndLose());
          
-            
-            //Audiomanager.instance.PlaySFX(Audiomanager.instance.death);
-            StartCoroutine(WaitForSeconds());
-            light2D.intensity = 1;
+        }
+    }
+
+    IEnumerator WaitAndLose()
+    {
+        yield return new WaitForSeconds(1); 
+        light2D.intensity = 1;
             youlost.SetActive(true);  
             howlost.text = "You woke up Jordge Snr";
             pausemenu.SetActive(true);  
             disapear.SetActive(false);
             exitbutton.SetActive(false);
-            movement.enabled = false;
-            watermeter.enabled = false;
-        }
-    }
-
-    IEnumerator WaitForSeconds()
-    {
-        yield return new WaitForSeconds(2);
+           
     }
 
  

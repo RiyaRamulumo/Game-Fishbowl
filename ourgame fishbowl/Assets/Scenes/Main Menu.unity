@@ -2150,7 +2150,7 @@ MonoBehaviour:
   jump: {fileID: 8300000, guid: 81c125f03121d4e4c82b663c84b74d82, type: 3}
   click: {fileID: 8300000, guid: aa7201a4d3283554baeafc33484eb7dd, type: 3}
   won: {fileID: 8300000, guid: 45af6ff75c12ca3408fd66d5cafe41a6, type: 3}
-  hitbubble: {fileID: 8300000, guid: aa7201a4d3283554baeafc33484eb7dd, type: 3}
+  hitbubble: {fileID: 8300000, guid: d35d4002438d49147aef9ef981a3656a, type: 3}
   hitthefloor: {fileID: 8300000, guid: e6c012c9db0ce8d4fb797bcf7c1b2d19, type: 3}
   background: {fileID: 8300000, guid: a9fc582a4c03aef4f9ce3b1b5b37dc5c, type: 3}
   splash: {fileID: 8300000, guid: 89545ab77acff4f4585d492ac85db2cf, type: 3}

@@ -1,5 +1,5 @@
 
-using UnityEngine;
+/*using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor;
 using UnityEditor.UIElements;
@@ -134,7 +134,7 @@ public class InteractableWater : MonoBehaviour
 
     }
 }
-[CustomEditor(typeof(InteractableWater))]
+//[CustomEditor(typeof(InteractableWater))]
 public  class InteractableWaterEditor : Editor
 {
     private InteractableWater water;
@@ -239,5 +239,5 @@ public  class InteractableWaterEditor : Editor
         }
 
     }
-}
+}*/
 
