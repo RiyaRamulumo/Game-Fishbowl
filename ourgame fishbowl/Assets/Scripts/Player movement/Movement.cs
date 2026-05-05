@@ -2,6 +2,7 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 
 public class Movement : MonoBehaviour
@@ -20,6 +21,7 @@ public class Movement : MonoBehaviour
     public ParticleSystem trail;
     public TextMeshProUGUI gameboardtext;
     public Watermeter watermeter;
+    public Light2D light2D;
     private bool pause;
     [SerializeField] private Animator jumpeffect;
    
@@ -88,6 +90,7 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Escape))
         {
+            light2D.intensity = 1;
             canvas.SetActive(true);
             escapemenu.SetActive(true);
             GetComponent<Movement>().enabled = false;

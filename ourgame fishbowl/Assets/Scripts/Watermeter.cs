@@ -96,6 +96,7 @@ public class Watermeter : MonoBehaviour
         if (seconds == 0)
         {
             light2D.intensity = 1;
+            Audiomanager.instance.PlaySFX(Audiomanager.instance.death);
         }
         
     }

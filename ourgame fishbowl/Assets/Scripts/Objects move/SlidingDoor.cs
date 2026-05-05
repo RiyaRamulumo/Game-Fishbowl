@@ -2,13 +2,15 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 
 public class SlidingDoor : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    public SpriteRenderer JordgeJnr;
-    public Sprite Jordge;
 
+    public Sprite Jordge;
+    
    
 
     public float speedopen = 2f;
@@ -21,11 +23,15 @@ public class SlidingDoor : MonoBehaviour
     public GameObject exitbutton;
     public GameObject pausemenu;
     public Movement movement;
+    public Light2D light2D;
     public TextMeshProUGUI howlost;
     public Watermeter watermeter;
+    public SpriteRenderer JordgeJnr;
+
     private void Start()
     {
         animator.SetTrigger("Play");
+        
     }
 
     public void DoorOpened()
@@ -41,11 +47,26 @@ public class SlidingDoor : MonoBehaviour
 
     IEnumerator Door()
     {
+
+        yield return new WaitForSeconds(speedopen);
+
         
-            yield return new WaitForSeconds(speedopen);
-            animator.SetTrigger("Play");
+        animator.SetTrigger("Play");
 
             
+    }
+    IEnumerator caught()
+    {
+        yield return new WaitForSeconds(4);
+        youlost.SetActive(true);
+        pausemenu.SetActive(true);
+        howlost.text = "You got caught by Jordge Jnr";
+        
+        disapear.SetActive(false);
+        exitbutton.SetActive(false);
+        movement.enabled = false;
+        Time.timeScale = 1f;
+        watermeter.enabled = false;
     }
 
     private void Update()
@@ -57,14 +78,13 @@ public class SlidingDoor : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
             {
-                youlost.SetActive(true);
-                pausemenu.SetActive(true);
-                howlost.text = "You got caught by Jordge Jnr";
+
                 JordgeJnr.sprite = Jordge;
-                disapear.SetActive(false);
-                exitbutton.SetActive(false);
+                Audiomanager.instance.PlaySFX(Audiomanager.instance.death); 
+                animator.SetTrigger("Caught"); 
+                light2D.intensity = 1;
+                StartCoroutine(caught());
                 movement.enabled = false;
-                Time.timeScale = 1f;
                 watermeter.enabled = false;
             }
         }
